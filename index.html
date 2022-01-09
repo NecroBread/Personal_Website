@@ -11,13 +11,26 @@
 
 <body>
     <!--Navigation-->
-    <nav id="navbar" class="main-nav back-gradient">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#projects-header">Projects</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-        </ul>
-    </nav>
+    <header class="back-gradient">
+        <div id="brand" class="hover-animation"><a href="#elcome-section">Mario Yordanov</a></div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#welcome-section">Home</a></li>
+                <li><a href="#projects-header">Projects</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger-icon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="#welcome-section">Home</a></li>
+                <li><a href="#projects-header">Projects</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </div>
+    </header>
     <!--Main Content-->
     <main class="container">
         <!--Welcome Screen-->
@@ -33,7 +46,8 @@
         <section id="projects" class="main-section">
             <div class="project-tile">
                 <div class="img-wrapper">
-                    <a href="https://codepen.io/necrobread/pen/mdBGdjR"><img src="https://i.ibb.co/Tcb4yRZ/Tolkien.png" alt="">
+                    <a href="https://codepen.io/necrobread/pen/mdBGdjR"><img src="https://i.ibb.co/Tcb4yRZ/Tolkien.png"
+                            alt="">
                     </a>
                 </div>
                 <h3>Tolkien Tribute</h3>
@@ -71,7 +85,7 @@
         </section>
         <section id="contacts" class="main-section back-gradient">
             <div class="contacts-div">
-                <h3>Contact me at</h3>
+                <h2>Contact me at</h2>
                 <ul>
                     <li><a id="profile-link" href="https://github.com/NecroBread" target="_blank">GitHub</a></li>
                     <li><a href="#">LinkedIn</a></li>
@@ -81,6 +95,9 @@
         </section>
         <script src="script.js"></script>
     </main>
+    <footer>
+        <p>© Created by Mario Yordanov, 2022</p>
+    </footer>
 </body>
 
 </html>
