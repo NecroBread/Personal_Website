@@ -12,13 +12,14 @@
 
 <body>
     <!--Navigation-->
+    <!--Main Content-->
     <header class="back-gradient">
         <div id="brand" class="hover-animation"><a href="#welcome-section">Mario Yordanov</a></div>
         <nav id="navbar">
             <ul>
                 <li><a href="#welcome-section">Home</a></li>
                 <li><a href="#about-me">About me</a></li>
-                <li><a href="#projects-stopping-point">Projects</a></li>
+                <li><a href="#projects-section">Projects</a></li>
                 <li><a href="#contacts">Contacts</a></li>
             </ul>
         </nav>
@@ -29,84 +30,94 @@
             <ul class="mobile-menu">
                 <li><a href="#welcome-section">Home</a></li>
                 <li><a href="#about-me">About me</a></li>
-                <li><a href="#projects-stopping-point">Projects</a></li>
+                <li><a href="#projects-section">Projects</a></li>
                 <li><a href="#contacts">Contacts</a></li>
             </ul>
         </div>
     </header>
-    <!--Main Content-->
     <main class="container">
-        <!--Welcome Screen-->
+        <!--WELCOME SECTION-->
         <section id="welcome-section" class="main-section">
-            <h1 id="title" class="text-gradient">Hi, I'm Mario</h1>
-            <p id="subtitle">A JavaScript enthusiast</p>
+            <div class="set-max-width">
+                <h1 id="title" class="text-gradient">Hi, I'm Mario</h1>
+                <p id="subtitle">A JavaScript enthusiast</p>
+            </div>
         </section>
-        <!--TODO: Short Introduction Section-->
-        <!--Projects-->
+        <!--ABOUT ME-->
         <section id="about-me" class="main-section">
-            <h2 class="">About me</h2>
-            <div id="bio-wrapper">
-                <div>
-                    <p>Hello! My name is Mario Yordanov and I have just started my journey in web development.
-                        My professional expirience is mainly in print as a prepress specialist. Lorem ipsum dolor, sit
-                        amet
-                        consectetur adipisicing elit. Deleniti eos doloremque odit laboriosam architecto commodi laborum
-                        animi
-                        recusandae molestiae nulla, veniam, dolores, iste officiis. Pariatur ipsam sed deleniti
-                        distinctio
-                        laboriosam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis fugit
-                        asperiores
-                        adipisci enim aut? Harum est laudantium temporibus sapiente veritatis at animi doloremque facere
-                        quia, facilis eaque explicabo saepe placeat.</p>
-                    <p>My main interests are in the MERN stack.</p>
+            <div class="set-max-width">
+                <h2 class="">About me</h2>
+                <div id="bio-wrapper">
+                    <div class="text-about-me">
+                        <p>Hello! My name is Mario Yordanov and I have just started my journey in web development.
+                            My professional expirience is mainly in print as a prepress specialist. Lorem ipsum dolor,
+                            sit
+                            amet
+                            consectetur adipisicing elit. Deleniti eos doloremque odit laboriosam architecto commodi
+                            laborum
+                            animi
+                            recusandae molestiae nulla, veniam, dolores, iste officiis. Pariatur ipsam sed deleniti
+                            distinctio
+                            laboriosam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis fugit
+                            asperiores
+                            adipisci enim aut? Harum est laudantium temporibus sapiente veritatis at animi doloremque
+                            facere
+                            quia, facilis eaque explicabo saepe placeat.</p>
+                        <p>My main interests are in the MERN stack.</p>
+                    </div>
+                    <div>
+                        <img id="portrait"
+                        src="https://i.ibb.co/nnKzJV1/30738871-1878515155506645-7732179919169765673-n.jpg"
+                        alt="Author's picture">
+                    </div>
                 </div>
-                <img id="portrait" src="https://i.ibb.co/nnKzJV1/30738871-1878515155506645-7732179919169765673-n.jpg"
-                    alt="Author's picture">
             </div>
         </section>
-        <div id="projects-stopping-point"></div>
+        <!--PROJECTS SECTION-->
         <section id="projects-section" class="main-section">
-            <div>
-                <h2 id="projects-header" class="text-gradient">These are some of my projects</h2>
-            </div>
-            <div id="projects">
-                <div class="project-tile">
-                    <div class="img-wrapper">
-                        <a href="https://codepen.io/necrobread/pen/mdBGdjR"><img
-                                src="https://i.ibb.co/Tcb4yRZ/Tolkien.png" alt="">
-                        </a>
-                    </div>
-                    <h3>Tolkien Tribute</h3>
+            <div class="set-max-width">
+                <div>
+                    <h2 id="projects-header" class="text-gradient">These are some of my projects</h2>
                 </div>
-                <div class="project-tile">
-                    <div class="img-wrapper">
-                        <img src="https://i.ibb.co/DzLbLd4/survey.png" alt="">
+                <div id="projects">
+                    <div class="project-tile">
+                        <div class="img-wrapper">
+                            <a href="https://codepen.io/necrobread/pen/mdBGdjR"><img
+                                    src="https://i.ibb.co/Tcb4yRZ/Tolkien.png" alt="">
+                            </a>
+                        </div>
+                        <h3>Tolkien Tribute</h3>
                     </div>
-                    <h3>Survey</h3>
-                </div>
-                <div class="project-tile">
-                    <div class="img-wrapper">
-                        <img src="https://i.ibb.co/YWKzHDL/sudoku.png" alt="">
+                    <div class="project-tile">
+                        <div class="img-wrapper">
+                            <img src="https://i.ibb.co/DzLbLd4/survey.png" alt="">
+                        </div>
+                        <h3>Survey</h3>
                     </div>
-                    <h3>Sudoku</h3>
-                </div>
-                <div class="project-tile">
-                    <div class="img-wrapper">
-                        <img src="https://i.ibb.co/R7czVrz/calculator-spine.png" alt="">
+                    <div class="project-tile">
+                        <div class="img-wrapper">
+                            <img src="https://i.ibb.co/YWKzHDL/sudoku.png" alt="">
+                        </div>
+                        <h3>Sudoku</h3>
                     </div>
-                    <h3>Book spine calculator</h3>
-                </div>
-                <div class="project-tile">
-                    <div class="img-wrapper">
-                        <img src="https://i.ibb.co/pbMyK6H/hello-git.png" alt="">
+                    <div class="project-tile">
+                        <div class="img-wrapper">
+                            <img src="https://i.ibb.co/R7czVrz/calculator-spine.png" alt="">
+                        </div>
+                        <h3>Book spine calculator</h3>
                     </div>
-                    <h3>Hello World in GitHub</h3>
-                </div>
-                <div class="project-tile">
-                    <div class="img-wrapper">
-                        <img src="https://i.ibb.co/1vw9fnT/hello-code.png" alt="">
+                    <div class="project-tile">
+                        <div class="img-wrapper">
+                            <img src="https://i.ibb.co/pbMyK6H/hello-git.png" alt="">
+                        </div>
+                        <h3>Hello World in GitHub</h3>
                     </div>
-                    <h3>Hello World in CodePen</h3>
+                    <div class="project-tile">
+                        <div class="img-wrapper">
+                            <img src="https://i.ibb.co/1vw9fnT/hello-code.png" alt="">
+                        </div>
+                        <h3>Hello World in CodePen</h3>
+                    </div>
                 </div>
             </div>
         </section>
@@ -142,10 +153,12 @@
             </div>
         </section>
         <script src="script.js"></script>
+        <footer>
+            <div class="set-max-width">
+                <p>© Created by Mario Yordanov, 2022</p>
+            </div>
+        </footer>
     </main>
-    <footer>
-        <p>© Created by Mario Yordanov, 2022</p>
-    </footer>
 </body>
 
 </html>

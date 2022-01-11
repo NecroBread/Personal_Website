@@ -17,9 +17,20 @@ h2 {
     font-weight: bold;
 }
 
+@media only screen and (max-width: 500px) {
+    h2 {
+        font-size: 8vmin;
+    }
+}
+
+
 h3 {
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.set-max-width {
+    max-width: 1300px;
 }
 
 .text-gradient {
@@ -38,7 +49,7 @@ h3 {
     background-size: 100%;
 }
 
-/* Navigation */
+/* || HEADER */
 header {
     display: flex;
     justify-content: space-between;
@@ -46,8 +57,9 @@ header {
     width: 100%;
     height: 50px;
     padding: 0 20px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
+    z-index: 100;
 }
 
 /* Brand Logo */
@@ -69,7 +81,7 @@ header {
     transition: 0.3s;
 }
 
-/* The Navigation Itself */
+/* || NAVIGATION */
 header ul {
     margin-top: 0;
     list-style: none;
@@ -139,7 +151,7 @@ header ul li a:hover {
     top: 50px;
     left: 0;
     width: 100%;
-    height: 170px;
+    height: 210px;
     padding-top: 20px;
     background-color: rgb(168, 156, 156);
 }
@@ -159,7 +171,7 @@ header ul li a:hover {
 }
 
 
-/* Welcome Screen */
+/* || WELCOME SECTION */
 #welcome-section {
     background-color: #dbd8d8;
     background-image: linear-gradient(90deg, rgb(224, 224, 224), #f5f3f3);
@@ -175,14 +187,16 @@ header ul li a:hover {
     margin-bottom: 1rem;
     font-size: 14vmin;
     font-weight: bold;
+    text-align: center;
 }
 
 #subtitle {
     font-size: 6vmin;
     font-style: italic;
+    text-align: center;
 }
 
-/* About me Section */
+/* || ABOUT ME SECTION */
 
 #about-me {
     height: 100vh;
@@ -208,20 +222,49 @@ header ul li a:hover {
     display: flex;
 }
 
+#bio-wrapper > .text-about-me {
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    #bio-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    #about-me {
+        height: auto;
+        padding: 50px 20px 50px 20px;
+    }
+}
+
 #portrait {
+    display: block;
+    max-width:230px;
+    max-height:300px;
+    width: auto;
+    height: auto;
     border-radius: 5px;
-    max-height: 300px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-/* Projects Section */
+#portrait:hover {
+    box-shadow: rgba(14, 30, 37, 0.62) 0px 2px 4px 0px, rgba(14, 30, 37, 0.62) 0px 2px 16px 0px;
+    transform: scale(1.05);
+    transition: 2s;
+}
+
+/* || PROJECTS SECTION */
 #projects-section {
-    padding: 50px;
+    padding: 100px 50px 50px 50px;
+}
+
+#projects-section>.set-max-width {
+    margin: 0 auto;
 }
 
 #projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%/1, max(300px, 100%/4)), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%/1, max(200px, 100%/4)), 1fr));
     gap: 30px;
     padding: 20px 50px 20px 50px;
 }
@@ -229,6 +272,10 @@ header ul li a:hover {
 @media screen and (max-width: 700px) {
     #projects {
         padding: 20px 0px 20px 0px;
+    }
+
+    #projects-section {
+        padding: 100px 0px 50px 0px;
     }
 }
 
@@ -258,7 +305,7 @@ header ul li a:hover {
     overflow: hidden;
 }
 
-/* Contacts Section */
+/* || CONTACTS SECTION */
 #contacts {
     display: flex;
     justify-content: center;
@@ -302,6 +349,8 @@ header ul li a:hover {
     padding: 0px 20px 0px 20px;
 }
 
+/* || FOOTER */
+
 footer {
     background-color: rgb(36, 36, 36);
     padding: 20px;
@@ -309,7 +358,7 @@ footer {
     justify-content: end;
 }
 
-footer>p {
+footer p {
     color: lightgray;
     font-size: 0.8rem;
 }
