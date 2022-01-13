@@ -1,10 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap');
 
+/* COLORS */
+:root {
+    --orange-dark: #ff6e40;
+    --light-color: #f5f0e1;
+    --blue-dark: #1e3d59;
+    --purple-matte: #c38d9e;
+    --green-matte: #41b3a3;
+}
+
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
@@ -15,6 +28,7 @@ h2 {
     margin-bottom: 1.3rem;
     font-size: 5vmin;
     font-weight: bold;
+    color: var(--blue-dark);
 }
 
 @media only screen and (max-width: 500px) {
@@ -22,7 +36,6 @@ h2 {
         font-size: 8vmin;
     }
 }
-
 
 h3 {
     margin-top: 15px;
@@ -33,37 +46,20 @@ h3 {
     max-width: 1300px;
 }
 
-.text-gradient {
-    background-color: brown;
-    background-image: linear-gradient(45deg, brown, #4256af);
-    background-size: 100%;
-    background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
-
-.back-gradient {
-    background-color: brown;
-    background-image: linear-gradient(45deg, brown, #4256af);
-    background-size: 100%;
-}
-
 /* || HEADER */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     position: fixed;
     width: 100%;
     height: 50px;
-    padding: 0 20px;
-    font-size: 1.2rem;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
+    padding: 20px 20px;
+    font-size: 1.5rem;
     z-index: 100;
 }
 
 /* Brand Logo */
-#brand {
+/* #brand {
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -79,16 +75,13 @@ header {
 #brand>a:hover {
     transform: scale(1.1);
     transition: 0.3s;
-}
+} */
 
 /* || NAVIGATION */
 header ul {
     margin-top: 0;
     list-style: none;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 
 header ul li {
@@ -98,8 +91,8 @@ header ul li {
 header ul li a {
     display: block;
     padding-left: 20px;
-    color: white;
     text-decoration: none;
+    color: var(--orange-dark);
 }
 
 header ul li a:hover {
@@ -173,8 +166,7 @@ header ul li a:hover {
 
 /* || WELCOME SECTION */
 #welcome-section {
-    background-color: #dbd8d8;
-    background-image: linear-gradient(90deg, rgb(224, 224, 224), #f5f3f3);
+    background-color: var(--light-color);
     background-size: 100%;
     height: 100vh;
     display: flex;
@@ -188,6 +180,8 @@ header ul li a:hover {
     font-size: 14vmin;
     font-weight: bold;
     text-align: center;
+    color: var(--orange-dark);
+    filter: drop-shadow(0.05em 0.05em orange);
 }
 
 #subtitle {
@@ -222,7 +216,7 @@ header ul li a:hover {
     display: flex;
 }
 
-#bio-wrapper > .text-about-me {
+#bio-wrapper>.text-about-me {
     padding-right: 20px;
 }
 
@@ -231,6 +225,7 @@ header ul li a:hover {
         flex-direction: column;
         align-items: center;
     }
+
     #about-me {
         height: auto;
         padding: 50px 20px 50px 20px;
@@ -239,16 +234,16 @@ header ul li a:hover {
 
 #portrait {
     display: block;
-    max-width:230px;
-    max-height:300px;
+    max-width: 230px;
+    max-height: 300px;
     width: auto;
     height: auto;
-    border-radius: 5px;
+    border-radius: 50%;
+    transition: transform 2s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 #portrait:hover {
-    box-shadow: rgba(14, 30, 37, 0.62) 0px 2px 4px 0px, rgba(14, 30, 37, 0.62) 0px 2px 16px 0px;
     transform: scale(1.05);
     transition: 2s;
 }
@@ -283,7 +278,8 @@ header ul li a:hover {
     overflow: hidden;
     border-radius: 5px;
     padding-bottom: 0%;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transition: transform 0.3s ease-in-out;
+    /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
 }
 
 .project-tile:hover {
@@ -312,6 +308,12 @@ header ul li a:hover {
     align-items: center;
     color: white;
     padding: 50px;
+    height: 100vh;
+    background-color: #41b3a3;
+}
+
+#contacts h2 {
+    color: white;
 }
 
 .contacts-div {
@@ -332,7 +334,7 @@ header ul li a:hover {
 }
 
 .contacts-div a:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: 0.3s;
 }
 
@@ -349,6 +351,56 @@ header ul li a:hover {
     padding: 0px 20px 0px 20px;
 }
 
+.contact-form {
+    width: 450px;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    resize: vertical;
+    max-height: 250px;
+    min-height: 100px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#contacts input {
+    height: 2rem;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background-color: #e27d60;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    font-display: uppercase;
+    transition: transform 0.5s ease-in-out;
+}
+
+.submit-btn:hover {
+    box-shadow: rgba(14, 30, 37, 0.22) 0px 2px 4px 0px, rgba(14, 30, 37, 0.62) 0px 2px 16px 0px;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+::placeholder {
+    vertical-align: middle;
+}
+
 /* || FOOTER */
 
 footer {
@@ -361,4 +413,14 @@ footer {
 footer p {
     color: lightgray;
     font-size: 0.8rem;
+}
+
+/* UTILITY */
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
 }
