@@ -83,13 +83,14 @@ header ul li a:hover {
 @media only screen and (max-width: 700px) {
     header {
         justify-content: center;
-        background-color: var(--blue-dark);  
-        box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;  
+        background-color: var(--blue-dark);
+        box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
     }
+
     header ul {
         display: flex;
         width: 100vw;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
         align-items: center;
     }
 }
@@ -141,15 +142,57 @@ header ul li a:hover {
 #about-me p {
     color: white;
     max-width: 800px;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    padding: 0 1rem 0 1rem;
+}
+
+#about-me p:first-child {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 #bio-wrapper {
     display: flex;
 }
 
-#bio-wrapper>.text-about-me {
-    padding-right: 20px;
+
+#portrait {
+    display: block;
+    max-width: 230px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#portrait:hover {
+    transform: scale(1.05);
+    transition: 2s;
+}
+
+/* SKILLS */
+.skills-container {
+    color: white;
+    display: flex;
+    justify-content: start;
+    padding: 0 1rem 0 1rem;
+    gap: 5rem;
+}
+
+.skills-heading {
+    text-align: left;
+}
+
+.skills-container ul {
+    display: block;
+    padding-left: 1rem;
+}
+
+.skills-container li {
+    list-style-type: square;
 }
 
 @media only screen and (max-width: 700px) {
@@ -162,27 +205,19 @@ header ul li a:hover {
         height: auto;
         padding: 5rem 1rem 5rem 1rem;
     }
+    #portrait {
+        margin-bottom: 2rem;
+    }
+    .skills-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
 
-#portrait {
-    display: block;
-    max-width: 230px;
-    max-height: 300px;
-    width: auto;
-    height: auto;
-    border-radius: 50%;
-    transition: transform 2s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-#portrait:hover {
-    transform: scale(1.05);
-    transition: 2s;
-}
 
 /* || PROJECTS SECTION */
 #projects-section {
-    padding: 100px 50px 50px 50px;
+    padding: 5rem 2.5rem 5rem 2.5rem;
 }
 
 #projects-section>.set-max-width {
@@ -335,7 +370,8 @@ header ul li a:hover {
 }
 
 @media only screen and (max-width: 500px) {
-    #contacts, 
+
+    #contacts,
     .contacts-div,
     .contact-form {
         width: 100%;
