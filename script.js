@@ -9,7 +9,7 @@ const links = [
     'https://github.com/NecroBread/Hello-World' // Hello World GitHub
 ]
 
-
+// Open link in new tab
 tiles.forEach((x, i) => {
     x.addEventListener('click', (e) => {
         window.open(links[i], '_blank').focus();
